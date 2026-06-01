@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vansh Saxena — Full Stack Developer & AI Explorer</title>
+  <meta name="description" content="Vansh Saxena — CS student at ABES Engineering, passionate about Full Stack Development, AI, and building real-world solutions.">
+  <meta name="author" content="Vansh Saxena">
+  <meta property="og:title" content="Vansh Saxena Portfolio">
+  <meta property="og:description" content="Full Stack Developer · AI Explorer · Coder">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div id="cursor"></div>
+  <div id="cursor-trail"></div>
+
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="loader-logo">VS</div>
+    <div class="loader-progress">
+      <div class="loader-bar-wrap"><div class="loader-bar" id="loader-bar"></div></div>
+      <div class="loader-pct" id="loader-pct">0%</div>
+    </div>
+    <div class="loader-msg" id="loader-msg">Initializing Portfolio...</div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <a href="#hero" class="nav-logo">Vansh Saxena</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#coding">Coding</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="mailto:vanshsaxena2007@outlook.com" class="nav-cta" id="nav-cta">Hire Me</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <canvas id="neural"></canvas>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Open to Internships &amp; Collaborations
+        </div>
+        <h1 class="hero-name">
+          <span class="name-gradient">Vansh Saxena</span>
+        </h1>
+        <p class="hero-tagline">Building Intelligent Solutions Through Code, Creativity &amp; Curiosity.</p>
+        <div class="hero-role-wrap">
+          <span class="role-prefix">const role =</span>
+          <span id="role-text">"Full Stack Developer"</span>
+        </div>
+        <div class="hero-btns">
+          <a href="#" class="btn-primary" id="resume-btn">⬇ Download Resume</a>
+          <a href="#contact" class="btn-outline">✉ Get In Touch</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/VanshSaxena1307" class="social-link" target="_blank" title="GitHub" rel="noopener">
+            <!-- GitHub SVG -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.69c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/vansh-saxena-180402365" class="social-link" target="_blank" title="LinkedIn" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          </a>
+          <a href="https://leetcode.com/u/Vansh_Saxena_2007/" class="social-link" target="_blank" title="LeetCode" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 95 111" fill="currentColor"><path d="M68.832 70.686H38.168a4.103 4.103 0 0 0 0 8.205h30.664a4.103 4.103 0 1 0 0-8.205zm6.952-33.836L57.8 18.867a4.103 4.103 0 0 0-5.801 5.801l4.696 4.696H24.896a4.103 4.103 0 0 0 0 8.205H56.695l-4.696 4.696a4.103 4.103 0 0 0 5.801 5.801l17.984-17.984a4.1 4.1 0 0 0 0-5.232zM54.102 85.099c-3.14 4.358-8.139 6.696-14.44 6.696-11.37 0-18.455-8.366-18.455-20.206V56.07c0-11.84 7.084-20.205 18.455-20.205 6.228 0 11.186 2.302 14.34 6.61a4.103 4.103 0 0 0 6.584-4.894c-4.549-6.122-11.802-9.921-20.924-9.921C26.014 27.66 13 39.05 13 56.07v15.519C13 88.608 26.014 100 39.662 100c9.186 0 16.48-3.836 21.026-10.02a4.103 4.103 0 0 0-6.586-4.881z"/></svg>
+          </a>
+          <a href="mailto:vanshsaxena2007@outlook.com" class="social-link" title="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+      <!-- PHOTO PLACEHOLDER — replace src with your image path -->
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-ring">
+          <div class="hero-photo-inner">
+            <img src="assets/photo.jpeg" alt="Vansh Saxena" style="width:100%;object-fit:cover;object-position:top center;">
+          </div>
+        </div>
+        <div class="photo-glow"></div>
+        <div class="hero-stat-chips">
+          <div class="stat-chip">🎓 <span>CSE</span> @ ABES</div>
+          <div class="stat-chip">🤖 <span>AI</span> Explorer</div>
+          <div class="stat-chip">💼 <span>Deloitte</span> Intern</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="reveal">
+        <div class="section-label">// 01. about</div>
+        <h2 class="section-title">The Story Behind<br>The Code</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>I'm <strong>Vansh Saxena</strong> — a Computer Science &amp; Engineering undergraduate at ABES Engineering College, Ghaziabad, driven by a genuine fascination with how technology can reshape the way we live, work, and create.</p>
+          <p>My academic journey kicked off with an outstanding <strong>96.60% in Class X</strong> and <strong>84.20% in Class XII</strong>. Now I'm channeling that same discipline into building things that matter — from polished web applications to AI-powered tools that solve real problems.</p>
+          <p>I've had the privilege of working as a <strong>Python Development Intern at Deloitte (Virtual)</strong>, where I developed scripts for JSON data transformation, applied enterprise-level debugging practices, and got a taste of consulting-grade software development.</p>
+          <p>Beyond code, I'm passionate about <strong>Web Technologies, Prompt Engineering, and the emerging possibilities</strong> at the intersection of creativity and AI. I believe the best software isn't just functional — it's elegant, purposeful, and human-centered.</p>
+          <div class="about-highlights">
+            <div class="highlight-item"><div class="num">5+</div><div class="label">Projects Built</div></div>
+            <div class="highlight-item"><div class="num">10+</div><div class="label">Technologies</div></div>
+            <div class="highlight-item"><div class="num">6</div><div class="label">Certifications</div></div>
+            <div class="highlight-item"><div class="num">∞</div><div class="label">Curiosity Level</div></div>
+          </div>
+        </div>
+        <div class="about-img-col reveal">
+          <div class="about-card">
+            <div class="about-card-header">
+              <div class="about-card-dot"></div>
+              <div class="about-card-title">Developer Journey</div>
+            </div>
+            <div class="timeline-mini">
+              <div class="tl-item">
+                <div class="tl-dot-wrap"><div class="tl-dot" style="background:var(--accent)"></div><div class="tl-line"></div></div>
+                <div class="tl-content"><div class="tl-title">🏫 Academic Foundation</div><div class="tl-sub">96.6% in Class X — Built strong analytical base</div></div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot-wrap"><div class="tl-dot" style="background:var(--accent3)"></div><div class="tl-line"></div></div>
+                <div class="tl-content"><div class="tl-title">💻 First Lines of Code</div><div class="tl-sub">HTML, CSS, JavaScript & Python fundamentals</div></div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot-wrap"><div class="tl-dot" style="background:var(--green)"></div><div class="tl-line"></div></div>
+                <div class="tl-content"><div class="tl-title">🚀 ABES Engineering College</div><div class="tl-sub">B.Tech CSE — Batch of 2029</div></div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot-wrap"><div class="tl-dot" style="background:var(--gold)"></div><div class="tl-line"></div></div>
+                <div class="tl-content"><div class="tl-title">🏢 Deloitte Internship</div><div class="tl-sub">Python Development — June 2025</div></div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot-wrap"><div class="tl-dot" style="background:var(--pink)"></div></div>
+                <div class="tl-content"><div class="tl-title">🤖 AI & Web Technologies</div><div class="tl-sub">Exploring intelligent systems & full-stack dev</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills">
+    <div class="section-inner">
+      <div class="reveal">
+        <div class="section-label">// 02. skills</div>
+        <h2 class="section-title">Technical Arsenal</h2>
+        <p class="section-sub">Technologies and tools I wield to craft digital experiences and intelligent solutions.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <div class="skill-cat"><div class="skill-cat-icon">🎨</div><div class="skill-cat-name">Frontend</div></div>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span>
+            <span class="skill-tag">JavaScript (ES6+)</span><span class="skill-tag">React.js</span>
+            <span class="skill-tag">Responsive Design</span><span class="skill-tag">Canvas API</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-cat"><div class="skill-cat-icon">⚙️</div><div class="skill-cat-name">Backend & Database</div></div>
+          <div class="skill-tags">
+            <span class="skill-tag">Node.js</span><span class="skill-tag">Python</span>
+            <span class="skill-tag">MySQL</span><span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">JSON</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-cat"><div class="skill-cat-icon">💻</div><div class="skill-cat-name">Programming Languages</div></div>
+          <div class="skill-tags">
+            <span class="skill-tag">JavaScript</span><span class="skill-tag">C++</span>
+            <span class="skill-tag">Python</span><span class="skill-tag">HTML/CSS</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-cat"><div class="skill-cat-icon">🛠</div><div class="skill-cat-name">Tools & Design</div></div>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span><span class="skill-tag">GitHub</span>
+            <span class="skill-tag">Figma</span><span class="skill-tag">Canva</span>
+            <span class="skill-tag">Tinkercad</span><span class="skill-tag">VS Code</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-cat"><div class="skill-cat-icon">🤖</div><div class="skill-cat-name">AI & Emerging Tech</div></div>
+          <div class="skill-tags">
+            <span class="skill-tag">Prompt Engineering</span>
+            <span class="skill-tag">AI Image Generation</span>
+            <span class="skill-tag">Data Analysis</span>
+            <span class="skill-tag">Vibe Coding</span>
+            <span class="skill-tag">Python Automation</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-cat"><div class="skill-cat-icon">🧠</div><div class="skill-cat-name">Soft Skills</div></div>
+          <div class="skill-tags">
+            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Team Leadership</span>
+            <span class="skill-tag">Communication</span>
+            <span class="skill-tag">Tech Operations</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects">
+    <div class="section-inner">
+      <div class="reveal">
+        <div class="section-label">// 03. projects</div>
+        <h2 class="section-title">What I've Built</h2>
+        <p class="section-sub">A selection of projects reflecting my journey from curious learner to intentional builder.</p>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Featured: Expense Tracker -->
+        <div class="project-card project-featured reveal">
+          <div class="project-banner banner-expense">
+            <div class="project-featured-badge">⭐ Featured</div>
+            <div class="banner-emoji">💰</div>
+            <div class="banner-title">Expense Tracker</div>
+            <div class="banner-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">Vanilla JS</span>
+              <span class="project-tag">Vercel</span>
+            </div>
+          </div>
+          <div class="project-body project-featured-body">
+            <p class="project-desc">A clean, intuitive expense tracking web app built with pure Vanilla JavaScript. Features real-time balance calculations, categorized transaction management, and a smooth user experience — deployed live on Vercel.</p>
+            <ul class="project-features">
+              <li>✦ Real-time income/expense balance tracking</li>
+              <li>✦ Add, categorize and delete transactions</li>
+              <li>✦ State management via Vanilla JS DOM manipulation</li>
+              <li>✦ Fully responsive and production-deployed on Vercel</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://expense-tracker-psi-brown-79.vercel.app/" target="_blank" class="project-link primary" rel="noopener">🔗 Live Demo</a>
+              <a href="https://github.com/VanshSaxena1307" target="_blank" class="project-link secondary" rel="noopener">⌥ GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Particle System -->
+        <div class="project-card reveal">
+          <div class="project-banner banner-particle">
+            <div class="banner-emoji">✨</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Particle System</div>
+            <p class="project-desc">Generates beautiful random fractal patterns using HTML Canvas. Each particle follows algorithmic rules to produce mesmerizing, procedurally generated visuals — a deep dive into creative coding.</p>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span><span class="project-tag">Canvas API</span><span class="project-tag">JavaScript</span>
+            </div>
+            <ul class="project-features-sm">
+              <li>✦ Procedural fractal generation</li>
+              <li>✦ Real-time canvas rendering</li>
+              <li>✦ Randomized visual patterns</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/VanshSaxena1307" target="_blank" class="project-link secondary" rel="noopener">⌥ GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gesture System -->
+        <div class="project-card reveal">
+          <div class="project-banner banner-gesture">
+            <div class="banner-emoji">👁️</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Gesture System</div>
+            <p class="project-desc">An experimental eye-tracking system that senses eye movement to dynamically locate and relocate screen images. Blink detection triggers screen state changes — a peek into gesture-driven human-computer interaction.</p>
+            <div class="project-tags">
+              <span class="project-tag">Computer Vision</span><span class="project-tag">JavaScript</span><span class="project-tag">Eye Tracking</span>
+            </div>
+            <ul class="project-features-sm">
+              <li>✦ Real-time eye movement detection</li>
+              <li>✦ Blink-to-change screen interaction</li>
+              <li>✦ Hands-free gesture UX</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/VanshSaxena1307" target="_blank" class="project-link secondary" rel="noopener">⌥ GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Apple Clone -->
+        <div class="project-card reveal">
+          <div class="project-banner banner-apple">
+            <div class="banner-emoji">🍎</div>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Apple Clone</div>
+            <p class="project-desc">A pixel-perfect recreation of Apple's product landing page — showcasing advanced CSS techniques, smooth scroll behaviors, and polished UI that mirrors Apple's signature design aesthetic.</p>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://vanshabes.github.io/" target="_blank" class="project-link primary" rel="noopener">🔗 Live Demo</a>
+              <a href="https://github.com/VanshSaxena1307" target="_blank" class="project-link secondary" rel="noopener">⌥ GitHub</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience">
+    <div class="section-inner">
+      <div class="reveal">
+        <div class="section-label">// 04. experience & achievements</div>
+        <h2 class="section-title">Experience &amp;<br>Certifications</h2>
+      </div>
+
+      <!-- Work Experience -->
+      <div class="exp-timeline reveal">
+        <div class="exp-item">
+          <div class="exp-meta">
+            <span class="exp-role">Python Development Intern</span>
+            <span class="exp-company">Deloitte (Virtual)</span>
+            <span class="exp-date">Jun 2025</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Developed scripts to transform and standardize JSON data using Python</li>
+            <li>Simulated client projects in a tech consulting environment</li>
+            <li>Applied debugging and testing techniques to validate code performance</li>
+            <li>Collaborated on solving structured, enterprise-level problems</li>
+          </ul>
+          <div class="exp-tech-tags">
+            <span class="project-tag">Python</span><span class="project-tag">JSON</span>
+            <span class="project-tag">Debugging</span><span class="project-tag">Data Handling</span>
+            <span class="project-tag">Tech Consulting</span>
+          </div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-meta">
+            <span class="exp-role">Technical Lead — School Program</span>
+            <span class="exp-company">Jaycees Public School</span>
+            <span class="exp-date">2024</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Led technical operations managing all logistics and tech setup for 15+ participants</li>
+            <li>Coordinated with a team of 12–15 peers ensuring seamless event execution</li>
+            <li>Demonstrated planning, leadership, and cross-functional collaboration</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="section-label" style="margin-top: 60px; margin-bottom: 16px;">// Certifications</div>
+      <div class="cert-grid reveal">
+        <div class="cert-card">
+          <div class="cert-icon">🤖</div>
+          <div><div class="cert-name">AI Tools Workshop</div><div class="cert-by">Be10x — Automation, Reliability & Optimization</div></div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">🌐</div>
+          <div><div class="cert-name">HTML Certification</div><div class="cert-by">Simplilearn</div></div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">🎨</div>
+          <div><div class="cert-name">CSS Certification</div><div class="cert-by">Simplilearn</div></div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">⚡</div>
+          <div><div class="cert-name">JavaScript Certification</div><div class="cert-by">Simplilearn</div></div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">⚛️</div>
+          <div><div class="cert-name">React.js Certification</div><div class="cert-by">Simplilearn</div></div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">💻</div>
+          <div><div class="cert-name">Web Development Course</div><div class="cert-by">CodeWithHarry</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education">
+    <div class="section-inner">
+      <div class="reveal">
+        <div class="section-label">// 05. education</div>
+        <h2 class="section-title">Academic Journey</h2>
+      </div>
+      <div class="edu-cards">
+        <div class="edu-card reveal">
+          <div class="edu-icon">🎓</div>
+          <div class="edu-degree">B.Tech — Computer Science &amp; Engineering</div>
+          <div class="edu-inst">ABES Engineering College, Ghaziabad</div>
+          <div class="edu-year">2025 – 2029</div>
+          <div class="edu-score green">Currently Enrolled — Building the future</div>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-icon">📘</div>
+          <div class="edu-degree">Senior Secondary (Class XII)</div>
+          <div class="edu-inst">Jaycees Public School, Rudrapur</div>
+          <div class="edu-year">2025</div>
+          <div class="edu-score gold">84.20%</div>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-icon">⭐</div>
+          <div class="edu-degree">Secondary (Class X)</div>
+          <div class="edu-inst">Jaycees Public School, Rudrapur</div>
+          <div class="edu-year">2023</div>
+          <div class="edu-score accent">96.60% — Academic Excellence</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CODING / GITHUB / LEETCODE ===== -->
+  <section id="coding">
+    <div class="section-inner">
+      <div class="reveal">
+        <div class="section-label">// 06. coding journey</div>
+        <h2 class="section-title">GitHub &amp; LeetCode</h2>
+        <p class="section-sub">Tracking progress one commit and one problem at a time.</p>
+      </div>
+      <div class="coding-grid">
+
+        <!-- GitHub -->
+        <div class="coding-card reveal">
+          <div class="coding-card-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--accent2)"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.69c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
+            GitHub Activity
+          </div>
+          <p class="coding-sub">github.com/VanshSaxena1307</p>
+          <div class="gh-contrib" id="gh-grid"></div>
+          <div class="gh-stats-row">
+            <div class="gh-stat">
+              <div class="gh-stat-num">5+</div>
+              <div class="gh-stat-label">Repositories</div>
+            </div>
+            <div class="gh-stat">
+              <div class="gh-stat-num">JS</div>
+              <div class="gh-stat-label">Web Primary</div>
+            </div>
+            <div class="gh-stat">
+              <div class="gh-stat-num">C++</div>
+              <div class="gh-stat-label">DSA Primary</div>
+            </div>
+          </div>
+          <a href="https://github.com/VanshSaxena1307" target="_blank" class="btn-outline coding-btn" rel="noopener">View GitHub Profile →</a>
+        </div>
+
+        <!-- LeetCode -->
+        <div class="coding-card reveal">
+          <div class="coding-card-title">
+            <svg width="20" height="20" viewBox="0 0 95 111" fill="var(--gold)"><path d="M68.832 70.686H38.168a4.103 4.103 0 0 0 0 8.205h30.664a4.103 4.103 0 1 0 0-8.205zm6.952-33.836L57.8 18.867a4.103 4.103 0 0 0-5.801 5.801l4.696 4.696H24.896a4.103 4.103 0 0 0 0 8.205H56.695l-4.696 4.696a4.103 4.103 0 0 0 5.801 5.801l17.984-17.984a4.1 4.1 0 0 0 0-5.232zM54.102 85.099c-3.14 4.358-8.139 6.696-14.44 6.696-11.37 0-18.455-8.366-18.455-20.206V56.07c0-11.84 7.084-20.205 18.455-20.205 6.228 0 11.186 2.302 14.34 6.61a4.103 4.103 0 0 0 6.584-4.894c-4.549-6.122-11.802-9.921-20.924-9.921C26.014 27.66 13 39.05 13 56.07v15.519C13 88.608 26.014 100 39.662 100c9.186 0 16.48-3.836 21.026-10.02a4.103 4.103 0 0 0-6.586-4.881z"/></svg>
+            LeetCode Stats
+          </div>
+          <p class="coding-sub">leetcode.com/u/Vansh_Saxena_2007</p>
+          <div class="lc-loading" id="lc-loading">
+            <div class="lc-spinner"></div>
+            <span>Fetching stats...</span>
+          </div>
+          <div class="lc-stats" id="lc-stats" style="display:none">
+            <div class="lc-stat easy">
+              <div class="lc-num" id="lc-easy">—</div>
+              <div class="lc-label">Easy</div>
+            </div>
+            <div class="lc-stat medium">
+              <div class="lc-num" id="lc-med">—</div>
+              <div class="lc-label">Medium</div>
+            </div>
+            <div class="lc-stat hard">
+              <div class="lc-num" id="lc-hard">—</div>
+              <div class="lc-label">Hard</div>
+            </div>
+          </div>
+          <div class="lc-total-box" id="lc-total-box" style="display:none">
+            <div class="lc-total-label">Total Solved</div>
+            <div class="lc-total-num" id="lc-total">—</div>
+            <div class="lc-total-sub">Problems &amp; Counting 🚀</div>
+          </div>
+          <div class="lc-error" id="lc-error" style="display:none">
+            <p>Live stats temporarily unavailable.</p>
+            <p>Visit profile for latest data.</p>
+          </div>
+          <button id="lc-refresh" style="display:none;margin-top:8px;padding:7px 16px;border-radius:8px;background:rgba(108,99,255,0.12);border:1px solid rgba(108,99,255,0.2);color:var(--accent2);font-size:0.78rem;cursor:pointer;font-family:inherit;width:100%;">🔄 Retry Fetch</button>
+          <a href="https://leetcode.com/u/Vansh_Saxena_2007/" target="_blank" class="btn-outline coding-btn" rel="noopener">View LeetCode Profile →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== JOURNEY ===== -->
+  <section id="journey">
+    <div class="section-inner">
+      <div class="reveal">
+        <div class="section-label">// 07. growth</div>
+        <h2 class="section-title">Developer Journey</h2>
+        <p class="section-sub">Every expert was once a beginner. Here's mine.</p>
+      </div>
+      <div class="journey-steps">
+        <div class="journey-step reveal">
+          <div class="j-num">01</div>
+          <div class="j-title">Fundamentals</div>
+          <div class="j-desc">Mastered core programming with Python & web basics — HTML, CSS, JS</div>
+        </div>
+        <div class="journey-step reveal">
+          <div class="j-num">02</div>
+          <div class="j-title">Web Projects</div>
+          <div class="j-desc">Built real projects — Apple Clone, Expense Tracker — deployed live</div>
+        </div>
+        <div class="journey-step reveal">
+          <div class="j-num">03</div>
+          <div class="j-title">Enterprise Code</div>
+          <div class="j-desc">Deloitte intern — enterprise-grade Python & JSON data pipelines</div>
+        </div>
+        <div class="journey-step reveal">
+          <div class="j-num">04</div>
+          <div class="j-title">Creative Coding</div>
+          <div class="j-desc">Particle systems, fractal generators, gesture-based UX experiments</div>
+        </div>
+        <div class="journey-step reveal">
+          <div class="j-num">05</div>
+          <div class="j-title">AI & Future</div>
+          <div class="j-desc">Exploring Prompt Engineering, AI tools & intelligent systems</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="reveal">
+        <div class="section-label">// 08. contact</div>
+        <h2 class="section-title">Let's Build Something<br>Together</h2>
+        <p class="section-sub">Open to internships, collaborations, hackathons, and conversations about tech.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="reveal">
+          <div class="contact-links">
+            <a href="mailto:vanshsaxena2007@outlook.com" class="contact-link">
+              <div class="contact-link-icon">✉</div>
+              <div><div class="contact-link-label">Email</div><div class="contact-link-text">vanshsaxena2007@outlook.com</div></div>
+            </a>
+            <a href="https://www.linkedin.com/in/vansh-saxena-180402365" target="_blank" class="contact-link" rel="noopener">
+              <div class="contact-link-icon">💼</div>
+              <div><div class="contact-link-label">LinkedIn</div><div class="contact-link-text">vansh-saxena-180402365</div></div>
+            </a>
+            <a href="https://github.com/VanshSaxena1307" target="_blank" class="contact-link" rel="noopener">
+              <div class="contact-link-icon">⌥</div>
+              <div><div class="contact-link-label">GitHub</div><div class="contact-link-text">VanshSaxena1307</div></div>
+            </a>
+            <a href="https://leetcode.com/u/Vansh_Saxena_2007/" target="_blank" class="contact-link" rel="noopener">
+              <div class="contact-link-icon">🏆</div>
+              <div><div class="contact-link-label">LeetCode</div><div class="contact-link-text">Vansh_Saxena_2007</div></div>
+            </a>
+            <a href="tel:+919012562896" class="contact-link">
+              <div class="contact-link-icon">📞</div>
+              <div><div class="contact-link-label">Phone</div><div class="contact-link-text">+91 9012562896</div></div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form reveal">
+          <div class="form-group">
+            <label for="cf-name">Your Name</label>
+            <input type="text" id="cf-name" placeholder="What should I call you?">
+          </div>
+          <div class="form-group">
+            <label for="cf-email">Email Address</label>
+            <input type="email" id="cf-email" placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label for="cf-msg">Message</label>
+            <textarea id="cf-msg" placeholder="Tell me about your idea, project, or just say hi 👋"></textarea>
+          </div>
+          <button class="btn-primary contact-submit" id="contact-submit">Send Message ✉</button>
+          <p class="form-note">📍 Based in Ghaziabad, India · Available for remote opportunities</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-left">Crafted with ❤️ by <span>Vansh Saxena</span> · 2025</div>
+    <div class="footer-right">
+      <a href="#hero">Back to Top ↑</a>
+      <a href="https://github.com/VanshSaxena1307" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/vansh-saxena-180402365" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/neural.js"></script>
+  <script src="js/loader.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/leetcode.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+/* ============================================
+   VANSH SAXENA PORTFOLIO — RESPONSIVE.CSS
+   Media queries for tablet & mobile
+   ============================================ */
+
+/* === TABLET (max 1024px) === */
+@media (max-width: 1024px) {
+  .hero-inner {
+    grid-template-columns: 1fr 320px;
+    gap: 48px;
+  }
+  .hero-photo-ring {
+    width: 280px;
+    height: 280px;
+  }
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .journey-steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .journey-steps::before { display: none; }
+}
+
+/* === SMALL LAPTOP / LARGE TABLET (max 900px) === */
+@media (max-width: 900px) {
+  /* Nav */
+  .nav-links,
+  .nav-cta { display: none; }
+  .hamburger { display: flex; }
+
+  /* Hero */
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+  .hero-photo-wrap { order: -1; }
+  .hero-photo-ring {
+    width: 240px;
+    height: 240px;
+  }
+  .hero-btns { justify-content: center; }
+  .hero-socials { justify-content: center; }
+  .hero-tagline { margin: 0 auto 20px; }
+  .hero-role-wrap { justify-content: center; }
+
+  /* About */
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+
+  /* Projects */
+  .projects-grid { grid-template-columns: 1fr; }
+  .project-featured { flex-direction: column; }
+  .project-featured .project-banner {
+    width: 100%;
+    min-height: 200px;
+  }
+
+  /* Coding */
+  .coding-grid { grid-template-columns: 1fr; }
+
+  /* Contact */
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+
+  /* Journey */
+  .journey-steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+  .journey-steps::before { display: none; }
+}
+
+/* === MOBILE (max 600px) === */
+@media (max-width: 600px) {
+  section { padding: 70px 4%; }
+
+  /* Hero */
+  .hero-photo-ring {
+    width: 200px;
+    height: 200px;
+  }
+  .hero-stat-chips { display: none; }
+  h1.hero-name { font-size: 2.6rem; }
+
+  /* About highlights */
+  .about-highlights { grid-template-columns: 1fr 1fr; }
+
+  /* Skills */
+  .skills-grid { grid-template-columns: 1fr; }
+
+  /* Projects */
+  .projects-grid { grid-template-columns: 1fr; gap: 16px; }
+  .project-banner { height: 140px; }
+
+  /* Certifications */
+  .cert-grid { grid-template-columns: 1fr; }
+
+  /* Education */
+  .edu-cards { grid-template-columns: 1fr; }
+
+  /* LeetCode stats */
+  .lc-stats { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .lc-num { font-size: 1.4rem; }
+
+  /* GitHub grid */
+  .gh-contrib {
+    grid-template-columns: repeat(20, 1fr);
+  }
+
+  /* Journey */
+  .journey-steps { grid-template-columns: 1fr; gap: 24px; }
+  .journey-step { flex-direction: row; text-align: left; gap: 20px; align-items: flex-start; }
+  .j-num { margin-bottom: 0; flex-shrink: 0; }
+
+  /* Contact */
+  .contact-links { gap: 10px; }
+  .contact-link { padding: 12px 16px; }
+
+  /* Footer */
+  footer { flex-direction: column; align-items: center; text-align: center; }
+  .footer-right { flex-wrap: wrap; justify-content: center; gap: 12px; }
+
+  /* Section titles */
+  .section-title { font-size: 1.8rem; }
+
+  /* Nav mobile overlay */
+  #nav-links.mobile-open {
+    display: flex !important;
+    flex-direction: column;
+    position: fixed;
+    top: 65px; left: 0; right: 0;
+    background: rgba(5, 5, 8, 0.97);
+    backdrop-filter: blur(20px);
+    padding: 24px 5%;
+    gap: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    z-index: 999;
+    animation: fadeInUp 0.3s ease;
+  }
+  #nav-cta.mobile-open {
+    display: block !important;
+    margin: 0 5% 20px;
+    text-align: center;
+  }
+
+  /* Experience */
+  .exp-meta { flex-direction: column; align-items: flex-start; gap: 6px; }
+}
+
+/* === SMALL MOBILE (max 380px) === */
+@media (max-width: 380px) {
+  .hero-photo-ring {
+    width: 170px;
+    height: 170px;
+  }
+  .hero-btns { flex-direction: column; align-items: center; }
+  .btn-primary, .btn-outline { width: 100%; justify-content: center; }
+  .about-highlights { grid-template-columns: 1fr; }
+  .gh-contrib { grid-template-columns: repeat(15, 1fr); }
+}
+
+/* === HIGH DPI / RETINA === */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .hero-photo-ring { padding: 2px; }
+}
+
+/* === REDUCED MOTION === */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
